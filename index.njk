@@ -1,0 +1,11 @@
+---
+layout: layouts/home.njk
+eleventyNavigation:
+  key: Home
+  order: 1
+---
+{% set postslist = collections.posts | head(-6) %}
+{% set postslistCounter = collections.posts | length %}
+{% include "postslist.njk" %}
+
+<p>Больше записей в <a href="{{ '/posts/' | url }}">архиве</a>.</p>
